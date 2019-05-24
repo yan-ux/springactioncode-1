@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="compactDisc" class="com.xml.BlankDisc" >
+        <constructor-arg value="Sgt Peppers Lonely Heart Club Band"/>
+        <constructor-arg value="The Beatles"/>
+    </bean>
+
+    <bean id="compactDiscList" class="com.xml.BlankDisc" scope="singleton" >
+        <constructor-arg value="Sgt Peppers Lonely Heart Club Band"/>
+        <constructor-arg value="The Beatles"/>
+        <constructor-arg>
+            <list>
+                <value>one list</value>
+                <value>two list</value>
+                <value>three list</value>
+                <value>four list</value>
+            </list>
+        </constructor-arg>
+
+    </bean>
+</beans>

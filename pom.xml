@@ -9,19 +9,31 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>chapter01</module>
         <module>mavenpractice</module>
         <module>chapter02</module>
+        <module>chapter001</module>
+        <module>chapter03</module>
+        <module>springmvcxml</module>
     </modules>
 
     <properties>
-      <testng.version>6.14.3</testng.version>
+       <testng.version>6.14.3</testng.version>
        <springframework.version>4.3.24.RELEASE</springframework.version>
+       <mockitocore.version>2.24.5</mockitocore.version>
+       <junit.version>4.12</junit.version>
+       <springtest.version>3.2.2.RELEASE</springtest.version>
+       <systemrules.version>1.18.0</systemrules.version>
 
     </properties>
-    <!-- 不引入实际的依赖，依赖管理-->
+    <!-- 不引入实际的依赖，依赖管理 P131-->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockitocore.version}</version>
+                <scope>test</scope>
+            </dependency>
             <dependency>
                 <groupId>org.testng</groupId>
                 <artifactId>testng</artifactId>
@@ -37,6 +49,24 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
                 <version>${springframework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${springframework.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.stefanbirkner</groupId>
+                <artifactId>system-rules</artifactId>
+                <version>${systemrules.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

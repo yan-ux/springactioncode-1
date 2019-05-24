@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AjcSettings">
+    <option name="cmdLineParams" value="-showWeaveInfo" />
+  </component>
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="chapter001" />
+        <module name="chapter02" />
+        <module name="chapter03" />
+        <module name="mavenpractice" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="chapter001" target="1.5" />
+      <module name="chapter01" target="1.5" />
+      <module name="chapter02" target="1.5" />
+      <module name="chapter03" target="1.5" />
+      <module name="mavenpractice" target="1.5" />
+      <module name="springactioncode" target="1.5" />
+      <module name="springmvcxml" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

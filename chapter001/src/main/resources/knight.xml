@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--构造SalaryDragonQuest，相当于new了个对象-->
+    <bean id="quest" class="knights.SalaryDragonQuest">
+        <!--#{}界定符将值装配到Bean的属性中; 类的方法和常量：在SpEL中是由T运算符调用类的方法和常量-->
+        <constructor-arg value="#{T(System).out}"/>
+    </bean>
+
+    <bean id="knight" class="knights.BraveKnight">
+        <constructor-arg ref="quest"/>
+    </bean>
+
+</beans>
