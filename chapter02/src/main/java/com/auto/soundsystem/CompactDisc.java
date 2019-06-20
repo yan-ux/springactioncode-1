@@ -8,4 +8,5 @@ package com.auto.soundsystem;
  */
 public interface CompactDisc {
     public void play();
+    public void playList();
 }

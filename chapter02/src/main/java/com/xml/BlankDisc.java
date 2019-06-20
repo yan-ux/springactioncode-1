@@ -27,10 +27,16 @@ public class BlankDisc implements CompactDisc {
         this.tracks = tracks;
     }
 
-    public void play() {
+
+    public void playList() {
         for (String track : tracks){
             System.out.println("track is : " + track);
         }
+        System.out.println("XML Playing" + title + " by " + artist);
+    }
+
+    public void play() {
+
         System.out.println("XML Playing" + title + " by " + artist);
     }
 

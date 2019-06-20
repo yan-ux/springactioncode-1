@@ -35,7 +35,7 @@ public class CompactDiscTest {
 
     @Test
     public void cdListShouldNotBeNull(){
-        cdList.play();
+        cdList.playList();
         System.out.println("打印对象了" + cdList);
         Assert.assertNotNull(cdList);
     }
